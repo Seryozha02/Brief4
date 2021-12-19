@@ -1,0 +1,228 @@
+*{  margin: 0;
+	padding: 0;
+	box-sizing: border-bo;
+}
+
+.num {
+    color: rgba(0, 183, 255, 0.363);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.left {
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: rgba(0, 183, 255, 0.363);
+}
+
+@media screen and (max-width: 800px) {
+    ul li
+    {
+     float: none;
+   }
+ }
+.text {
+  margin: 0 20px;
+ 
+}
+
+.card1{
+  width: 70%;
+  height: 400px;
+  background-color: darkgray;
+  align-items: center;
+  margin: 0 auto;
+}
+.forma input {
+  width: 95%;
+  padding: 12px 20px;
+  margin: 8px 12px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.forma label {
+  margin: 0 20px;
+}
+
+.forma input[type="submit"] {
+  width: 20%;
+  background-color: gray;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.wrapper>.hidden {  
+  display: none;
+}
+
+.wrapper {
+  width: 800px;
+  margin: auto;
+}
+.cvWrapper{
+  border: 1px solid grey;
+  margin: auto;
+}
+
+.contact{
+  margin-top: 20px;
+}
+.personImg {
+  grid-column-start: 3;
+}
+.personImg > img{
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+}
+.personName{
+  padding-left: 25px;
+  color: #b1afaf;
+  font-family: monospace;
+}
+.infoBox{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  
+}
+.info{
+  display: grid;
+  color: #3e3d3d;
+  font-family: monospace;
+  padding-left: 50px;
+  border-bottom: inset;
+  padding: 20px;
+}
+.infoText{
+  margin: 1px;
+  font-weight: 700;
+  display: grid;
+  grid-template-columns: 300px 300px;
+}
+
+.infoSubHeader{
+  font: small-caption;
+}
+
+.infoHeader{
+  font-weight: 700;
+  color: brown;
+}
+.subHeader{
+  font-weight: 700;
+  font-family: inherit;
+}
+.infoSubText{
+  font-style: italic;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0px 50px 0px 50px;
+  background-color: #4d9099;
+  border-bottom: #32a0c2;
+  border-style: double;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 1440px; */
+    justify-content: space-around; 
+    background-color: rgb(62, 112, 112); 
+    
+
+}
+.card { 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  padding: 5px;
+  margin: 20px;
+  background-color: rgb(43, 219, 219);
+  border-radius: 10%;
+}
+
+.card img {
+  width: 60%;
+  height: 60%;
+  border: 2px solid black;
+  border-radius: 10%;
+  margin-top: 10px;
+}
+
+a button  {
+  
+  background-color: #2bacb1;
+  border:none;
+  color: rgb(8, 1, 1);
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 20px;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.btn :hover {
+  background-color: #0181f8;
+}
+
+.hidden {
+  display:none;
+}
+.about {
+  padding: 50px;
+}
+
+.textSpan {
+  color: #0d1eda;
+}
+.firstName{
+  color: black;
+}
+.phone{
+  color: black;
+}
+.email{
+  color: black;
+}

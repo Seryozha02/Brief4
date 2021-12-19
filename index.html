@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="container1">
+    <header>
+      <ul>
+        <li class="left">
+          <a href="index.html">
+            <span class="num">1-2-3</span> <span> Web Design</span></a>
+        </li>
+        <li class="right"><a href="./service.html">Services</a></li>
+        <li class="right"><a href="./about.html">About</a></li>
+        <li class="right"><a href="index.html">Home</a></li>
+      </ul>
+    </header>
+    </div>
+    <div class="contentWrapper">
+    <div id="cv-list" class="container">
+      <!-- content from JS: list() -->
+    </div>
+    <div id="cv-page" class="box hidden">
+      <div class="wrapper cvWrapper">
+        <div class="header">
+        <div class="headImg">
+          <div class="personName"></div>
+            <div class="lastName"></div>
+            <div class="firstName"> </div>
+            <div class="contact">
+              <p class="phone"><label for="">Phone:</label><span></span></p>
+              <p class="email"><label for="">Email:</label><span></span></p>
+            </div>
+          </div>
+          <div class ="personImg" >
+          <img class = "imgImage" src="./img/newUser.jpg">
+        </div>
+      </div>
+        <div class="infoBox">
+          <div class="info">
+            <div class="info">
+              <h3 class="infoHeader eduinfo">Education</h3>
+              <div class="infoText" id="education1">
+                <div class="infoSubHeader">
+                  <p class="subHeader educationName"></p>
+                  <p class="infoDate"></p>
+                </div>
+              </div>
+            </div>
+            <div class="info">
+              <h3 class="infoHeader workinfo">Work Experience</h3>
+              <div class="infoText">
+                <div class="infoSubHeader">
+                  <p class="subHeader companyName"></p>
+                  <p class="infoDate"></p>
+                </div>
+                <div class="infoSubText">
+                  <p class=""></p>
+                </div>
+              </div>
+              <div class="infoText">
+                <div class="infoSubHeader">
+                  <p class="subHeader"></p>
+                  <p class="infoDate"></p>
+                </div>
+                <div class="infoSubText ">
+                  <p class=""></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div  id="add-new" class="add-new hidden">
+      <div class="text">
+        <h2>Please enter your details</h2>
+      </div>
+      <div class="forma">
+      <form class="new-member">
+        <label for="name-field">First Name</label>
+        <input type="text" id="name-field" placeholder="" name="firstName" />
+        <label for="lastName-field">Last Name</label>
+        <input type="text" id="lastName-field" placeholder="" name="lastName" />
+        <label for="phone-field">Phone</label>
+        <input type="text" name="phone" id="phone-field">
+        <label for="email-field">Email</label>
+        <input type="email" id="email-field" name="email">
+        <label for="education-field">Education</label>
+        <input type="text" name="education" id="education-field">
+        <label for="work-field">Work Experience</label>
+        <input type="text" name="workExperience" id="work-field">        
+        <input type="submit" value="submit" id="submit-button" />
+      </form>
+    </div>
+    </div>
+  </div>
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>
