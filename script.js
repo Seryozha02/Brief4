@@ -1,11 +1,11 @@
-import {xx} from "./data.js"
+import {programmers as members} from "./data.js"
 
 const USERS = "users";
-let programmers = getFromStorage(USERS) || saveToStorage(xx);
+let programmers = getFromStorage(USERS) || saveToStorage(members);
 function list() {
   let container = document.querySelector(".container");
   container.innerHTML += `<div class="card" class="new-add person">
-  <img src="./img/newUser.jpg" alt="person-icon">
+  <img src="/img/newUser.jpg" alt="person-icon">
   <div class="btn">
   <a href="#addItem" class="biolink"><button>New Person</button></a>
   </div>
@@ -13,7 +13,7 @@ function list() {
   
   programmers.forEach((programmer) => {
     container.innerHTML += `<div class="card">
-        <img src="${
+        <img src="/img/${
           programmer.imagePath || "./img/person-icon.jpg"
         }" alt="person-icon">
         <div class = "bio">
@@ -38,8 +38,8 @@ document
     let formElements = document.querySelector(".new-member").elements;
 
     let newUserCV = {
-      imagePath: "./img/newUser.jpg",
-      id: "id=" + new Date().valueOf(),
+      imagePath: "/newUser.jpg",
+      id: new Date().valueOf(),
     };
 
     console.log(formElements);
@@ -98,13 +98,11 @@ window.addEventListener("hashchange", function () {
             cvList.classList.add("hidden");
             cvPage.classList.remove("hidden");
             addNew.classList.add("hidden");
+            let id = hash.split("=")[1];
+            console.log(hash,id)
+            let foundUser = findUserById(id)
+            addUserData(foundUser);
 
-            addUserData(
-              programmers.find((item) => {
-                let id = hash.split("=")[1];
-                return item.id === id;
-              })
-            );
           }
           break;
       }
@@ -112,6 +110,15 @@ window.addEventListener("hashchange", function () {
   }
 
 });
+function findUserById(id){
+  console.log("programmers = ",programmers)
+let found = programmers.find(function(programmer){
+return programmer.id.toString() === id.toString();
+});
+return found;
+}
+
+
 function addUserData(programmer) {
   console.log("personalData===", programmer);
   document.querySelector(".firstName").innerHTML = programmer.firstName;
@@ -119,6 +126,6 @@ function addUserData(programmer) {
   document.querySelector(".email").innerHTML = programmer.email;
   document.querySelector(".educationName ").innerHTML = programmer.education;
   document.querySelector(".companyName ").innerHTML =programmer.experience || "";
-  document.querySelector(".imgImage").setAttribute("src", programmer.imagePath || "./img/person-icon.jpg");
+  document.querySelector(".imgImage").setAttribute("src","/img/" + programmer.imagePath || "./img/person-icon.jpg");
   document.querySelector(".phone label").innerHTML = programmer.phone || "";
 }
